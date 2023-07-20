@@ -39,7 +39,7 @@ public class OrderCalculator {
             return totalCost;
         }
 
-        private static double calculateMealCost(Meal meal, int quantity) {
+        public static double calculateMealCost(Meal meal, int quantity) {
             return meal.getPrice() * quantity;
         }
 
@@ -52,7 +52,7 @@ public class OrderCalculator {
             return totalCost;
         }
 
-        private static double applySpecialOfferDiscount(double totalCost) {
+        public static double applySpecialOfferDiscount(double totalCost) {
             if (totalCost > SPECIAL_OFFER_DISCOUNT_THRESHOLD_2) {
                 totalCost -= SPECIAL_OFFER_DISCOUNT_2;
             } else if (totalCost > SPECIAL_OFFER_DISCOUNT_THRESHOLD_1) {
@@ -61,11 +61,10 @@ public class OrderCalculator {
             return totalCost;
         }
 
-        private static double applySpecialCategorySurcharge(double totalCost, boolean specialCategoryIncluded) {
+        public static double applySpecialCategorySurcharge(double totalCost, boolean specialCategoryIncluded) {
             if (specialCategoryIncluded) {
                 totalCost *= (1 + SPECIAL_CATEGORY_SURCHARGE);
             }
             return totalCost;
         }
     }
-

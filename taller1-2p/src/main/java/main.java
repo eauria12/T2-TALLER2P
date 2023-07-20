@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class main {
+public class Main {
 
 	private static final int MAX_MEAL_QUANTITY = 100;
 
